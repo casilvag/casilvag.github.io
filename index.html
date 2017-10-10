@@ -566,26 +566,19 @@
                   var sketchProc = function(processingInstance) {
                     with (processingInstance) {size(400, 400); frameRate(30);
                           // WRITE YOUR PROGRAM CODE HERE  
-                          var x=80;
-
-                          draw= function() {
-                              
-                          background(0, 200, 200);
-
-                          fill(0, 250, 0);
-
-                          rect(0, 300, 400, 100);  
-
-
-                          // The sun
-
-                          fill(200, 200, 0);
-
-                          ellipse(x, 64, 100, 100);
-
-                          x=x+1;
-
-                          };
+                          void setup() {
+                            size(800, 600, P3D); 
+                          }
+                          void draw() {
+                            background(200);
+                            stroke(255, 400);
+                            translate(400, 300, 100);
+                            rotateX(mouseY * 0.005);
+                            rotateY(mouseX * 0.005);
+                            fill(mouseX * 4, 0, 160);
+                            sphereDetail(mouseX / 25);
+                            sphere(200);
+                          }
 
                           //YOUR JS PROGRAM CODE ENDS HERE.
                           }};  
