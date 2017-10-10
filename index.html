@@ -559,12 +559,25 @@
                   <h2>Taller Mallas Poligonales</h2>
                   <p class="item-intro text-muted">Rendering</p>
                   <img class="img-fluid d-block mx-auto" src="img/portfolio/03-full.jpg" alt="">
-                  <p>-</p>
+                  <p>void setup() {
+                            size(800, 600, P3D); 
+                          }
+                          void draw() {
+                            background(200);
+                            stroke(255, 400);
+                            translate(400, 300, 100);
+                            rotateX(mouseY * 0.005);
+                            rotateY(mouseX * 0.005);
+                            fill(mouseX * 4, 0, 160);
+                            sphereDetail(mouseX / 25);
+                            sphere(200);
+                          }
+                  </p>
                   
                   <script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script> 
                   <script>
                   var sketchProc = function(processingInstance) {
-                    with (processingInstance) {size(400, 400); frameRate(30);
+                    with (processingInstance) {size(800, 600); frameRate(30);
                           // WRITE YOUR PROGRAM CODE HERE  
                           void setup() {
                             size(800, 600, P3D); 
@@ -582,10 +595,7 @@
 
                           //YOUR JS PROGRAM CODE ENDS HERE.
                           }};  
-                          </script>
-
-
-
+                  </script>
 
                   <ul class="list-inline">
                     <li>Date: January 2017</li>
